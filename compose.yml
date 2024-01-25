@@ -1,0 +1,12 @@
+services:
+  palworld:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8211:8211"
+      - "8211:8211/udp"
+      - "27015:27015"
+      - "27015:27015/udp"
+    volumes:
+      - ./Saved:/srv/palworld/Pal/Saved
